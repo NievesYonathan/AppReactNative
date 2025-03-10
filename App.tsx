@@ -1,4 +1,5 @@
 import { HomeScreen } from './src/views/home/home';
+import { RegisterScreen } from './src/views/register/register';
 import * as React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
@@ -15,10 +16,18 @@ const App = () => {
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown: false}}>
         <Stack.Screen
-          name="Home"
+          name="HomeScreen"
           component={HomeScreen}
         />
-        {/*<Stack.Screen name="Profile" component={ProfileScreen} />*/}
+
+        <Stack.Screen name="RegisterScreen" 
+          component={RegisterScreen}
+          options={{
+            title: 'Registro',
+            headerShown: true,
+          }} 
+        />
+
       </Stack.Navigator>
     </NavigationContainer>
   );

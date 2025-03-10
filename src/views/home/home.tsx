@@ -60,8 +60,9 @@ export const HomeScreen = () => {
 
         <View style={styles.formRegister}>
           <Text>¿No tienes cuenta?</Text>
-          <TouchableOpacity onPress={() => navigation.navigate('RegisterScreen')}
+          <TouchableOpacity onPress={() => navigation.navigate('RegisterScreen')}>
           <Text style={styles.formRegisterText}>Regístrate Aquí</Text>
+          </TouchableOpacity>
         </View>
       </View>
     </View>
